@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export DIR="/tmp"
-export LOG_FILE="/var/log/takephoto.log"
+export LOG_FILE="/var/log/takephoto/takephoto.log"
 export TIMESTAMP=`date +%Y-%m-%d-%H.%M.%S`
 export FILENAME="${DIR}/${TIMESTAMP}.jpg"
 
