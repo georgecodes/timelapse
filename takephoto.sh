@@ -6,8 +6,9 @@ export TIMESTAMP=`date +%Y-%m-%d-%H.%M.%S`
 export FILENAME="${DIR}/${TIMESTAMP}.jpg"
 
 function log {
-	echo $1
-	echo $1 >> $LOG_FILE
+	local MESSAGE="$(date) - $1"
+	echo $MESSAGE
+	echo $MESSAGE >> $LOG_FILE
 }
 
 log "Attempting to take photograph and save in ${FILENAME}"
