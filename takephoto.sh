@@ -13,7 +13,7 @@ function log {
 
 log "Attempting to take photograph and save in ${FILENAME}"
 
-OUTPUT=$(gphoto2 --capture-image-and-download --filename ${FILENAME})
+OUTPUT=$(/usr/local/bin/gphoto2 --capture-image-and-download --filename ${FILENAME})
 
 log $OUTPUT
 
