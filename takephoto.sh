@@ -16,12 +16,14 @@ if [ $? -ne 0 ]; then
   exit -1
 fi
 
-scp ${FILENAME} root@emohawk.local:/volume1/westquay/images/raw/
+OUTPUT=$(scp ${FILENAME} root@emohawk.local:/volume1/westquay/images/raw/)
+
+echo $OUTPUT
 
 if [ $? -eq 0 ]; then
   echo "I took a photo ${TIMESTAMP} and uploaded it" | mail -s "Photo uploaded" george@georgemcintosh.com
   rm ${FILENAME}
 else
-  echo "I took a photo ${TIMESTAMP} but it didn't upload" | mail -s "Photo taken but not uploaded" george@georgemcintosh.com
+  echo "I took a photo ${TIMESTAMP} but it didn't upload\n\n${OUTPUT}" | mail -s "Photo taken but not uploaded" george@georgemcintosh.com
   exit -2
 fi
