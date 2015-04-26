@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exit -1
+
 SCRIPT_DIR=`dirname $0`
 export DIR="/tmp"
 export LOG_FILE="/var/log/takephoto/takephoto.log"
