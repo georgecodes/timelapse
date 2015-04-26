@@ -7,10 +7,10 @@ export FILENAME="${DIR}/${TIMESTAMP}.jpg"
 mkdir -p $DIR
 echo "Attempting to take photograph and save in ${FILENAME}"
 
-gphoto2 --capture-image-and-download --filename ${FILENAME}
+OUTPUT=$(gphoto2 --capture-image-and-download --filename ${FILENAME})
 
 if [ $? -ne 0 ]; then 
-  echo "I tried to take a photo ${TIMESTAMP} but it failed for some reason" | mail -s "Photo failed" george@georgemcintosh.com
+  echo "I tried to take a photo ${TIMESTAMP} but it failed for some reason\n\n${OUTPUT}" | mail -s "Photo failed" george@georgemcintosh.com
   exit -1
 fi
 
