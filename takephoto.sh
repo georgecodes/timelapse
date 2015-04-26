@@ -6,7 +6,7 @@ export TIMESTAMP=`date +%Y-%m-%d-%H.%M.%S`
 export FILENAME="${DIR}/${TIMESTAMP}.jpg"
 
 function log {
-	local MESSAGE="$(date) - $1"
+	local MESSAGE="$(date) ($(whoami)) - $1"
 	echo $MESSAGE
 	echo $MESSAGE >> $LOG_FILE
 }
