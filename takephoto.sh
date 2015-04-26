@@ -32,7 +32,7 @@ if [ $? -eq 0 ]; then
   MESSAGE="I took a photo ${TIMESTAMP} and uploaded it"
   log $MESSAGE
   echo $MESSAGE | mail -s "Photo uploaded" george@georgemcintosh.com
-  #rm ${FILENAME}
+  rm ${FILENAME}
 else
   MESSAGE="I took a photo ${TIMESTAMP} but it didn't upload\n\n${OUTPUT}" 
   log $MESSAGE
