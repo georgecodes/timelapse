@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export DIR="/tmp"
 export LOG_FILE="/var/log/takephoto/takephoto.log"
