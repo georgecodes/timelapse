@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export DIR="${PWD}/photos"
+export DIR="/tmp/photos"
 export TIMESTAMP=`date +%Y-%m-%d-%H.%M.%S`
 export FILENAME="${DIR}/${TIMESTAMP}.jpg"
 
