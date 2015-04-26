@@ -5,7 +5,7 @@ export LOG_FILE="/var/log/takephoto.log"
 export TIMESTAMP=`date +%Y-%m-%d-%H.%M.%S`
 export FILENAME="${DIR}/${TIMESTAMP}.jpg"
 
-function log() {
+function log {
 	echo $1
 	echo $1 >> $LOG_FILE
 }
