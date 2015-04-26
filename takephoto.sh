@@ -9,6 +9,8 @@ echo "Attempting to take photograph and save in ${FILENAME}"
 
 OUTPUT=$(gphoto2 --capture-image-and-download --filename ${FILENAME})
 
+echo $OUTPUT
+
 if [ $? -ne 0 ]; then 
   echo "I tried to take a photo ${TIMESTAMP} but it failed for some reason\n\n${OUTPUT}" | mail -s "Photo failed" george@georgemcintosh.com
   exit -1
