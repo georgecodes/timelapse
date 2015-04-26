@@ -1,9 +1,10 @@
 #!/bin/sh
 
-export DIR=`dirname $0`
+export DIR="${PWD}/photos"
 export TIMESTAMP=`date +%Y-%m-%d-%H.%M.%S`
 export FILENAME="${DIR}/${TIMESTAMP}.jpg"
 
+mkdir -p $DIR
 echo "Attempting to take photograph and save in ${FILENAME}"
 
 gphoto2 --capture-image-and-download --filename ${FILENAME}
