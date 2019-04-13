@@ -24,7 +24,7 @@ if [ $? -ne 0 ]; then
   exit -1
 fi
 
-OUTPUT=$(scp ${FILENAME} root@emohawk.local:/volume1/westquay/images/raw/)
+OUTPUT=$(scp ${FILENAME} camera@emohawk.local:/volume1/westquay/images/raw/)
 
 log $OUTPUT
 
